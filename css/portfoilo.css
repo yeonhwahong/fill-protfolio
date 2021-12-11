@@ -1,0 +1,78 @@
+*{margin:0;padding:0;}
+html {scroll-behavior: smooth;}
+:root{
+    word-break: keep-all;/*16px*/ 
+    font-size:100%
+}
+::-webkit-scrollbar{width:0;height:0;}
+a{text-decoration: inherit; list-style: none;}
+li{list-style:none;}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+p,li{font-family: 'Nanum Gothic', sans-serif;}
+body{position: relative;min-width:1920px;height:100vh}
+/**/
+.header{position:fixed;width:100%;height:80px;margin:25px 0;padding:25px;box-sizing: border-box;
+    display: flex; justify-content:space-between; align-items: center;z-index: 100;}
+.navbtn{position: relative;width:48px;height:42px;}
+.navline{position:absolute;width:48px;height:8px;top:50%;transform: translateY(-50%);background-color: rgb(247, 112, 35);transition: all 0.3s ease;transform-origin:left;z-index: 1;}
+.navpage{font-size:18px; font-weight: 800;color:rgb(247, 112, 35);text-align:right;z-index: 0;}
+.navpage div{margin:10px 0;position:absolute;top:25px;right:30px;}
+.navpage div a{text-decoration: inherit; list-style: none;color: inherit;}
+.navabout{transition: all 0.3s ease;opacity:0;}
+.navwork{transition: all 0.3s 0.1s ease;opacity:0;}
+.navcontact{transition: all 0.3s 0.2s ease;opacity:0;}
+.xnavbtnT{top:10%;}
+.xnavbtnB{top:90%;} 
+.navabout{left:-48px}
+
+.header-logo { flex-grow: 1;}
+.header-logo img{ height:50px;}
+
+.pfgrid{min-width:1920px; display:flex;justify-content: flex-start;align-items: flex-start;height:100vh;position:relative ;z-index:12;background-color: white;}
+.pfgrid-3d{min-width:1920px;display:flex;justify-content: flex-start;align-items: flex-start;height:100vh;position:relative ;z-index:11;background-color: white;opacity: 0;position:absolute;width: 100%;height:100vh;top:0;left:0;}
+
+.pfbox{position:relative;width:18%;height:100vh;border-right:1px solid rgb(247, 112, 35);transition: all 0.3s ease;}
+.pfbox-ct{position: absolute;height:70vh;bottom:0vh;padding:0 25px;}
+.pfbox-ct span{color:rgb(247, 112, 35);font-size: 20px;font-weight: 600;}
+.linebar{width:66px;height:2px;background-color:rgb(247, 112, 35);;transform: translate(-25px,-8.5px);}
+.pfbox-ct h1{color:rgb(247, 112, 35);font-size: 50px;font-weight: 800; line-height: 0.8; ;margin: 50px 0;}
+.pfbox-ct h2 {font-size: 15px;font-weight: 300;margin: 15px 0;}
+.pfgrid-img{width: 100%;margin-bottom: 25px;}
+.pfpage-btn{width:50%;}
+.pf3dbox{width: 10%;height:100%;position:relative;border-right:1px solid rgb(247, 112, 35);}
+.pf3dbox-ct h1{color:rgb(247, 112, 35);font-size: 30px;font-weight: 800; line-height: 0.8; ;margin: 50px 0;opacity: 60%;}
+.pf3d-btn{width:60px;opacity: 100;}
+
+/*화면 로드*/
+.fillgrid .pfbox-ct{bottom:-20vh;opacity: 0;}
+.repickgrid .pfbox-ct{bottom:-40vh;opacity: 0;}
+.kodakgrid .pfbox-ct{bottom:-60vh;opacity: 0;}
+.monstergrid .pfbox-ct{bottom:-70vh;opacity: 0;}
+.teamlabgrid .pfbox-ct{bottom:-80vh;opacity: 0;}
+.pf3dbox-ct{position: absolute;top:100%;transform:translateY(-50%);padding:0 25px;opacity: 0;}
+
+
+
+/**/
+.project{position: absolute;width: 100%;height:100vh;top:0;left:0;overflow-y: scroll;z-index:10;opacity: 0;}
+.pj-side{position:fixed;width:0%;height:100vh;background-color:rgb(247,112,35);padding:12vh 25px 0 25px;color:white;transition: all 0.7s ease;}
+.pj-side.on{width:21%;}
+.pj-side-txt{opacity: 0;transition: all 0.5s 0.4s ease;}.pj-side-txt.on{opacity: 1;}
+.side-name{margin:20px 0;font-weight: 600;}
+.side-name::after{content: "";display: block;margin-top:15px;width:40px;height:5px;background-color: white;}
+.pj-side h4{font-weight:300;}
+.side-content {width:100%;margin:25px 0;line-height: 1.8;}
+.pj-side .web-btn {width:60%;border:2px solid white;text-align: center;padding:30px;}
+.pj-side .web-btn a{color: inherit;text-decoration: inherit; list-style: none;}
+.pj-side .web-btn:hover{background-color: white;color:rgb(247,112,35);}
+.xicon{height:50px;margin-bottom: 25px;}
+.sidebox{padding-top:25px;display:flex;justify-content:flex-end;align-items:flex-start;margin-bottom:80px;border-top:1px solid white}
+.sidebox h1{font-size:50px;font-weight:800;line-height:1;flex-grow: 1;}
+.sidebox span{padding:25px 10px 0 10px;}
+.sidebox img{height:60px;padding-top:5px;}
+.sidebox2{display:flex;justify-content:space-between;align-items:center;font-weight: 300;margin-bottom: 30px;}
+.sidebox2::before{content: '';display: inline-block;width:20px;height:20px;background-color: white;}
+.sidebox2 h4{flex-grow: 1;margin:0 10px;}
+.pj-content{margin-left:23%;position: relative;}
+.contentbox{margin:0 10%;padding-top:12vh;}
+.contentbox img{width:100%}
